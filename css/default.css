@@ -1,0 +1,391 @@
+/* General Demo Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@font-face {
+	font-family: 'fontawesome';
+	src:url('../fonts/fontawesome.eot');
+	src:url('../fonts/fontawesome.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/fontawesome.svg#fontawesome') format('svg'),
+		url('../fonts/fontawesome.woff') format('woff'),
+		url('../fonts/fontawesome.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body, html { font-size: 100%; 	padding: 0; margin: 0;}
+
+/* Reset */
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
+
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #47a3da;
+
+}
+
+a {
+	color: #f0f0f0;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+
+.main{
+
+
+}
+
+
+
+.container > header {
+	width: 90%;
+	max-width: 69em;
+	margin: 0 auto;
+	/*padding: 0 1.875em 3.125em 1.875em;*/
+}
+
+.container > header {
+	/*padding: 2.875em 1.875em 1.875em;*/
+}
+
+.container > header h1 {
+	font-size: 2.125em;
+	line-height: 1.3;
+	margin: 0;
+	float: left;
+	font-weight: 400;
+}
+
+.container > header span {
+	display: block;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+	padding: 0 0 0.6em 0.1em;
+}
+
+.container > header nav {
+	float: right;
+}
+
+.container > header nav a {
+	display: block;
+	float: left;
+	position: relative;
+	width: 2.5em;
+	height: 2.5em;
+	background: #fff;
+	border-radius: 50%;
+	color: transparent;
+	margin: 0 0.1em;
+	border: 4px solid #47a3da;
+	text-indent: -8000px;
+}
+
+.container > header nav a:after {
+	content: attr(data-info);
+	color: #47a3da;
+	position: absolute;
+	width: 600%;
+	top: 120%;
+	text-align: right;
+	right: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.container > header nav a:hover:after {
+	opacity: 1;
+}
+
+.container > header nav a:hover {
+	background: #47a3da;
+}
+
+.icon-drop:before, 
+.icon-arrow-left:before {
+	font-family: 'fontawesome';
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 2;
+	text-align: center;
+	color: #47a3da;
+	-webkit-font-smoothing: antialiased;
+	text-indent: 8000px;
+	padding-left: 8px;
+}
+
+.container > header nav a:hover:before {
+	color: #fff;
+}
+
+.icon-drop:before {
+	content: "\e000";
+}
+
+.icon-arrow-left:before {
+	content: "\f060";
+}
+
+
+/*MENU NAV*/
+
+
+.logo{
+	
+
+	margin-top:1%;
+	width: 11%;
+	height: 13.8%;
+	margin-left: auto; 
+	margin-right: auto; 
+
+}
+
+.navMenu{
+	
+
+	/*margin-top:1.5%;*/
+	margin-left: 23%;
+
+
+
+}
+
+
+ul.nav{
+	
+	
+	list-style: none;
+	font-size: 0.9375em;
+	
+} 
+
+ul.nav li{
+
+	float: left;
+	margin-right: 4%;
+	margin-bottom: 1.5%;
+	
+}
+
+ul.nav li a{
+
+	color: #888;
+	
+}
+
+
+ul.nav li a:hover{
+
+	
+	color: #1e437f;
+}
+
+
+/*CONTACTO*/
+
+.contacto{
+
+width: 30%;
+height: 50%;
+position: fixed;left: 73%;
+margin: 3% 0 0 -37.5%;
+background: #f0f0f0; 
+color: #595692; 
+opacity: 0.99; 
+
+border-radius: 5px;
+
+}
+
+
+
+
+ul.infoEmpresa{
+margin-top: auto;
+left: 4%; 
+
+list-style: none;
+font-size: 0.9375em;
+  
+}
+ul.infoEmpresa li{
+line-height:1.5em;
+
+}
+
+ul.infoEmpresa li a{
+display: block;
+width: 115px;
+height: 40px;
+background: #595692;
+padding: 10px;
+text-align: center;
+border-radius: 5px;
+color: white;
+
+margin-top: 5px; 
+
+}
+
+
+
+
+form, fieldset, input, textarea {
+	margin: 0; padding: 0; border: 0; outline: none;
+}
+
+
+
+
+/*MODAL POPUP CONTACT*/
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+
+
+}
+
+
+.modalDialog:target {
+	opacity:1 !important;
+	pointer-events: auto;
+}
+
+
+
+.modalDialog > div {
+	width: 30%;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #f0f0f0;
+	color: #707070;
+	
+}
+
+
+.modalDialog h2{
+
+	color:#595692;
+
+}
+.close {
+	background: #f0f0f0;
+	color:#B9B9B9;
+	line-height: 25px;
+	position: absolute;
+	right: -8px;
+	
+	top: -8px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+
+	text-align: center;
+
+
+}
+
+.close:hover { 
+	background: #575353; 
+	color:#f0f0f0;
+}
+
+/*CONTACT FORM*/
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form input[type="url"],
+#contact-form textarea {
+    width:100%;
+    box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    -webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    -moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    border:1px solid #CCC;
+    background:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+    border-radius:5px;
+  	font-family: Calibri;
+}
+
+#contact-form button[type="submit"] {
+    cursor:pointer;
+    width:100%;
+    border:none;
+    background:#595692;
+    color:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+    border-radius:5px;
+}
+
+::-webkit-input-placeholder {
+    color:#888;
+}
+:-moz-placeholder {
+    color:#888;
+}
+::-moz-placeholder {
+    color:#888;
+}
+:-ms-input-placeholder {
+    color:#888;
+}
+
+/*Google map*/
+
+.googleMap{
+float:right;
+width:100%; height:229px; 
+border-radius: 10px;
+
+
+}
