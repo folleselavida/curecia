@@ -97,6 +97,10 @@ btn:hover {
 	color:#595692;
 }
 
+.on{
+	color:#595692;
+}
+
 .nav-bar-vert{
         background-image: -moz-linear-gradient(top,#222,#111);
         background-image: -webkit-gradient(linear,0 0,0 50%,from(#222),to(#111));
@@ -114,9 +118,11 @@ btn:hover {
 /*Thumbnail*/
 .thumbnail{
 	position:absolute;
-	width:23.5%;
-	bottom:-13px;
-	margin:13px 38%;
+	left:50%;
+	bottom:0;
+	width:23.5%;	
+	margin:0 0 0 -11.75%;
+
 	color:white;
 	background-color:#2D308B;
 	opacity: 0.9;
@@ -202,7 +208,10 @@ btn:hover {
 }
 
 
-/* Larger ----------- */
+
+
+
+/* Larger -----------  IPAD*/
 @media screen and (max-width: 1024px) {
 
 .logo {
@@ -214,7 +223,7 @@ btn:hover {
 }
 
 
-/* Medium ------------ */
+/* Medium ------------ IPAD */
 @media screen and (max-width: 768px) {
 .logo {
 	width: 18%;
@@ -226,6 +235,11 @@ btn:hover {
 
 /* Medium ------------ */
 @media screen and (max-width: 360px) {
+
+#nav{
+	display:none;
+}
+
 .logo {
 	width: 30%;
 	margin:0 35%;
@@ -248,7 +262,7 @@ btn:hover {
 .grid_9,
 .grid_10,
 .grid_11,
-.grid_12 {
+.grid_12{
 	width:100%;
 }
 
@@ -262,6 +276,12 @@ btn:hover {
 	max-width: 100%;
 }
 
+
+.thumbnail{
+	width:100%;
+	left:0;
+	margin: 0;
+}
 
 
 }
