@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="css/component.css" type="text/css"/>
 	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	<meta name="viewport" content="width=device-width, initial-scale = 1.0">
@@ -26,11 +25,11 @@
 		</div>	
 		<div id="nav" class="grid_12">			
 			<ul> 
-				<li><a class="<?php if ($section == "inicio") { echo "on"; } ?>" href="index.php">inicio</a></li>
-				<li><a class="<?php if ($section == "estudio") { echo "on"; } ?>" href="estudio.php">estudio</a></li>
-				<li><a class="<?php if ($section == "servicios") { echo "on"; } ?>" href="servicios.php">servicios</a></li>
-				<li><a class="<?php if ($section == "portafolio") { echo "on"; } ?>" href="portafolio.php">portafolio</a></li>
-				<li><a class="<?php if ($section == "contacto") { echo "on"; } ?>" href="contacto.php">contacto</a></li>
+				<li><a class="<?php if ($section == "inicio") { echo "on"; } ?>" href="inicio">inicio</a></li>
+				<li><a class="<?php if ($section == "estudio") { echo "on"; } ?>" href="estudio">estudio</a></li>
+				<li><a class="<?php if ($section == "servicios") { echo "on"; } ?>" href="servicios">servicios</a></li>
+				<li><a class="<?php if ($section == "portafolio") { echo "on"; } ?>" href="portafolio">portafolio</a></li>
+				<li><a class="<?php if ($section == "contacto") { echo "on"; } ?>" href="contacto">contacto</a></li>
 			</ul>			
 		</div>		
 	</header>	

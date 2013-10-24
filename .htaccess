@@ -1,0 +1,6 @@
+RewriteEngine On 
+RewriteRule ^inicio/?$ index.php [NC,L]  
+RewriteRule ^estudio/?$ estudio.php [NC,L]  
+RewriteRule ^servicios/?$ servicios.php [NC,L]  
+RewriteRule ^portafolio/?$ portafolio.php [NC,L]  
+RewriteRule ^contacto/?$ contacto.php [NC,L]  
