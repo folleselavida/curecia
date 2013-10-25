@@ -1,16 +1,65 @@
 <?php 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = trim($_POST["name"]);
+    $email = trim($_POST["email"]);
+    $phone = trim($_POST["phone"]);
+    $message = trim($_POST["message"]);
+
+
+    if ($name == "" OR $email == "" OR $message == "" OR $phone == "") {
+        echo "Verifique que todos los campos requeridos esten completos.";
+        exit;
+    }
+
+    foreach( $_POST as $value ){
+        if( stripos($value,'Content-Type:') !== FALSE ){
+            echo "Existe problemas con la informacion que ingreso.";    
+            exit;
+        }
+    }
+
+    require_once("inc/phpmailer/class.phpmailer.php");
+    $mail = new PHPMailer();
+
+    if (!$mail->ValidateAddress($email)){
+        echo "You must specify a valid email address.";
+        exit;
+    }
+
+    $email_body = "";
+    $email_body = $email_body . "Nombre: " . $name . "<br>";
+    $email_body = $email_body . "Email: " . $email . "<br>";
+    $email_body = $email_body . "Telefono: " . $phone . "<br>";
+    $email_body = $email_body . "Mensaje: " . $message;
+
+    $mail->SetFrom($email, $name);
+    $address = "jd.florez39@gmail.com";
+    $mail->AddAddress($address, "CURE & CIA");
+    $mail->Subject    = "CURE & CIA - CONTACTENOS | " . $name;
+    $mail->MsgHTML($email_body);
+
+    if(!$mail->Send()) {
+      echo "Hubo un problema enviando el correo: " . $mail->ErrorInfo;
+      exit;
+    }
+
+    header("Location: contacto.php");
+    exit;
+}
+?><?php 
 $pageTitle="CURE Y CIA LTDA | Contacto";
 $section="contacto";
 include('inc/header.php'); ?>
 
 	<div class="clearfix slider">
 		<ul class="rslides">
-		  	<li><img src="images/1.jpg" alt="image01"/></li>
-		  	<li><img src="images/2.jpg" alt="image02"/></li>
-		  	<li><img src="images/3.jpg" alt="image03"/></li>
-		  	<li><img src="images/4.jpg" alt="image04"/></li>
-		  	<li><img src="images/5.jpg" alt="image05"/></li>
-		  	<li><img src="images/6.jpg" alt="image06"/></li>
+		  	<li><img src="/images/1.jpg" alt="image01"/></li>
+		  	<li><img src="/images/2.jpg" alt="image02"/></li>
+		  	<li><img src="/images/3.jpg" alt="image03"/></li>
+		  	<li><img src="/images/4.jpg" alt="image04"/></li>
+		  	<li><img src="/images/5.jpg" alt="image05"/></li>
+		  	<li><img src="/images/6.jpg" alt="image06"/></li>
 		</ul>		
 	</div>
 
@@ -35,32 +84,33 @@ include('inc/header.php'); ?>
 		<div>
 			<a href="#close" title="Close" class="close">X</a>
 			<h2>CONTÁCTANOS</h2>
-			<form id="contact-form" action="contacto.html" method="post">
+			<form id="contact-form" action="contacto.php" method="post">
 
 				<h5>LLena el formulario y nos comunicaremos contigo en menos de 24 horas.</h5>
+
 				<div>
 					<label>
-						<span>Nombre:*</span>
-						<input placeholder="Ingrese su nombre" type="text" tabindex="1" required autofocus>
+						<span><label for="name">Nombre*</label></span>
+						<input placeholder="Ingrese su nombre" type="text" name="name" id="name" required autofocus>
 					</label>
 				</div>
 				<div>
 					<label>
 						<span>E-mail:*</span>
-						<input placeholder="Ingrese su e-mail" type="email" tabindex="2" required>
+						<input placeholder="Ingrese su e-mail" type="email" name="email" id="email" required>
 					</label>
 				</div>
 				<div>
 					<label>
 						<span>Teléfono:*</span>
-						<input placeholder="Ingrese su teléfono" type="tel" tabindex="3" required>
+						<input placeholder="Ingrese su teléfono" type="tel" name="phone" id="phone" required>
 					</label>
 				</div>
 
 				<div>
 					<label>
-						<span>Message:*</span>
-						<textarea placeholder="Escriba su mensaje" tabindex="4" required></textarea>
+						<span>Mensaje:*</span>
+						<textarea placeholder="Escriba su mensaje" name="message" id="message" required></textarea>
 					</label>
 				</div>
 				<h6>*Campos requridos</h6>
@@ -73,7 +123,7 @@ include('inc/header.php'); ?>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="js/responsiveslides.min.js"></script>
+	<script src="/js/responsiveslides.min.js"></script>
 	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
 	<script>
 	    $(function() {
