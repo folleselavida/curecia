@@ -17,9 +17,9 @@ include('inc/header.php'); ?>
 		</ul>		
 	</div>
 
-	<div class="thumbnail"><p><a href="portafolio.php">proyectos</a></p></div>
+	<div class="thumbnail"><p><a href="proyectos.php">proyectos</a></p></div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="/js/responsiveslides.min.js"></script>
 	<script>
 	  $(function() {
