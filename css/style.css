@@ -156,6 +156,11 @@ btn:hover {
 	-moz-border-radius: 150px;
 }
 
+.equipo_info{
+	height:70px;
+	margin:0 0 20px;
+}
+
 /*Servicios--------------------*/
 .accordion{
 	margin: 25px 0;
@@ -182,6 +187,23 @@ btn:hover {
     -webkit-transition: all 1s ease-in-out; /** Chrome & Safari **/
     -moz-transition: all 1s ease-in-out; /** Firefox **/
     -o-transition: all 1s ease-in-out; /** Opera **/
+}
+
+.accordion_content img{
+	position:relative;
+	left:50%;
+	margin:8px 0 0 -10%;
+	width:20%;
+}
+
+.accordion_content h3{
+	position:relative;
+	top:-14px;
+	text-align: center;
+}
+
+.accordion_content p{
+	text-align: center ;
 }
 
 .accordion_item:hover .accordion_content { 

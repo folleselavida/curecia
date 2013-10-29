@@ -24,33 +24,45 @@ include('inc/header.php'); ?>
 	    	<h2>Equipo de Trabajo</h2>
 	    	<div class="grid_4">
 	    		<img src="http://lorempixel.com/g/200/200/people/1" alt="mision"> 
-	    		<p>Nombre</p></br>
-	    		<p>Cargo</p>   	
+	    		<div class="equipo_info">
+	    			<p>Nombre</p>
+	    			<p>Cargo</p>
+	    		</div>   	
 	    	</div>
 	    	<div class="grid_4">
 	    		<img src="http://lorempixel.com/g/200/200/people/2" alt="mision"> 
-	    		<p>Nombre</p></br>
-	    		<p>Cargo</p>   	
+	    		<div class="equipo_info">
+	    			<p>Nombre</p>
+	    			<p>Cargo</p>
+	    		</div>    	
 	    	</div>
 	    	<div class="grid_4 omega">
 	    		<img src="http://lorempixel.com/g/200/200/people/3" alt="mision">  
-	    		<p>Nombre</p></br>
-	    		<p>Cargo</p>  	
+	    		<div class="equipo_info">
+	    			<p>Nombre</p>
+	    			<p>Cargo</p>
+	    		</div>  	
 	    	</div>
 	    	<div class="grid_4">
 	    		<img src="http://lorempixel.com/g/200/200/people/4" alt="mision"> 
-	    		<p>Nombre</p></br>
-	    		<p>Cargo</p>   	
+	    		<div class="equipo_info">
+	    			<p>Nombre</p>
+	    			<p>Cargo</p>
+	    		</div>    	
 	    	</div>
 	    	<div class="grid_4">
 	    		<img src="http://lorempixel.com/g/200/200/people/5" alt="mision">    
-	    		<p>Nombre</p></br>
-	    		<p>Cargo</p>	
+	    		<div class="equipo_info">
+	    			<p>Nombre</p>
+	    			<p>Cargo</p>
+	    		</div>  
 	    	</div>
 	    	<div class="grid_4 omega">
 	    		<img src="http://lorempixel.com/g/200/200/people/6" alt="mision">    	
-	    		<p>Nombre</p></br>
-	    		<p>Cargo</p>
+	    		<div class="equipo_info">
+	    			<p>Nombre</p>
+	    			<p>Cargo</p>
+	    		</div>  
 	    	</div>
     	</div>
 	</div>	
