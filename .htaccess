@@ -5,3 +5,6 @@ RewriteRule ^servicios/?$ servicios.php [NC,L]
 RewriteRule ^proyectos/$ /proyectos/proyectos.php 
 RewriteRule ^contacto/?$ contacto.php [NC,L] 
 
+RewriteRule ^proyectos/([a-zA-Z0-9_-]+)/$ /proyectos/categoria.php?nombre=$1
+
+

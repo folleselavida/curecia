@@ -42,7 +42,7 @@ $pageTitle = "CURE Y CIA LTDA | Estudio";
 $section = "proyectos";
 include(ROOT_PATH . 'inc/header.php'); ?>
 
-	<div class="container clearfix">
+	<div class="container clearfix proyectos">
 
 		<div class="grid_2 nav-bar-vert">
 			<ul class="categorias">
@@ -55,22 +55,16 @@ include(ROOT_PATH . 'inc/header.php'); ?>
 		</div>
 
 		<div class="grid_10 omega">
-
-			<div class="wrapper">
-
+			
+			<ul class="grid_12 products">
+				<?php
+					foreach($projects as $project) {
+						include(ROOT_PATH . "inc/partial-project-list-view.html.php");
+					}
+				?>
+			</ul>
+			<div class="grid_12 omega">
 				<?php include(ROOT_PATH . "inc/partial-list-navigation.html.php"); ?>
-
-				<ul class="products">
-					<?php
-						foreach($projects as $project) {
-							include(ROOT_PATH . "inc/partial-project-list-view.html.php");
-						}
-					?>
-				</ul>
-
-				<?php include(ROOT_PATH . "inc/partial-list-navigation.html.php"); ?>
-
 			</div>
-
 		</div>
 	</div>

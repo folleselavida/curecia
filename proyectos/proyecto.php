@@ -9,10 +9,10 @@ if (isset($_GET["nombre"])) {
 	$proyecto = get_project_single($proyecto_nombre);
 }
 
-// a $product will only be set and not false if an ID is specified in the query
-// string and it corresponds to a real product. If no product is
-// set, then redirect to the shirts listing page; otherwise, continue
-// on and display the Shirt Details page for that $product
+// a $project will only be set and not false if an ID is specified in the query
+// string and it corresponds to a real project. If no project is
+// set, then redirect to the projects listing page; otherwise, continue
+// on and display the Project Details page for that $product
 if (empty($proyecto)) {
 	header("Location: " . BASE_URL . "proyecto/");
 	exit();

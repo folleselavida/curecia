@@ -7,8 +7,8 @@
  *     - name: The name of the 
  */
 
-?><li class="grid_3">
-        <a href="/proyectos/<?php echo $project["nombre"]; ?>/">
+?><li class="grid_3medio">
+        <a href="/proyectos/<?php echo $project["categoria"]."/".$project["url"]; ?>/">
             <img src="<?php echo BASE_URL . $project["img_one"]; ?>" alt="<?php echo $project['nombre']; ?>">
             <p><?php echo $project["nombre"]; ?></p>
         </a>

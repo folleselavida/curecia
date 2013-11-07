@@ -7,4 +7,8 @@
  *     - name: The name of the 
  */
 
-?><li><?php echo $category["Categoria"]; ?></li>
+?><li>
+		<a href="/proyectos/<?php echo $category["Categoria"]; ?>/">
+			<?php echo $category["Categoria"]; ?>
+		</a>
+	</li>

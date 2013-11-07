@@ -103,8 +103,25 @@ btn:hover {
 }
 
 .nav-bar-vert{
-        background-color:#F0F0F0;
-        height: 600px;
+    background-color:#F0F0F0;
+    height: 600px;
+}
+
+.categorias {	
+	list-style: none;
+	text-align: left;
+}
+
+.categorias li {
+	display: inline-block; 
+}
+	
+.categorias li a {
+	margin-top: 5px;	
+}
+
+.categorias li a:hover {
+	color:#595692;
 }
 
 .rsp-nav{
@@ -425,6 +442,35 @@ btn:hover {
 	border-radius: 10px;
 }
 
+/*-------PROYECTOS-------*/
+.proyectos{
+	margin-top: 20px;
+}
+
+/*Pagination*/
+.pagination {
+    text-align: right;
+    margin: 1em 7% 1em 0;
+}
+.pagination a,
+.pagination span {
+    padding: 5px 8px;
+    border: 1px solid #e3e1e0;
+    display: inline-block;    
+    text-decoration: none;
+    color: #676767;
+}
+.pagination span {
+	background: #2D308B;
+	border-color: #999;
+	color:white;
+}
+.pagination span:hover {
+	background: #F0F0F0;
+	border-color: #999;
+	color: #444;
+	cursor:pointer;
+}
 
 /* Larger -----------  IPAD*/
 @media screen and (max-width: 1024px) {

@@ -77,7 +77,11 @@ function get_projects_all() {
     require(ROOT_PATH . "inc/database.php");
 
     try {
-        $results = $db->query("SELECT nombre, img_one FROM proyectos ORDER BY nombre ASC");
+        $results = $db->query("SELECT nombre, img_one, categorias.Categoria as categoria,url
+                                FROM proyectos
+                                LEFT JOIN categorias
+                                ON proyectos.categoria=categorias.ID
+                                ORDER BY nombre ASC");
     } catch (Exception $e) {
         echo "Data could not be retrieved from the database.";
         exit;
@@ -98,7 +102,7 @@ function get_categories_all() {
     require(ROOT_PATH . "inc/database.php");
 
     try {
-        $results = $db->query("SELECT Categoria FROM categorias ORDER BY Categoria ASC");
+        $results = $db->query("SELECT ID, Categoria FROM categorias ORDER BY Categoria ASC");
     } catch (Exception $e) {
         echo "Data could not be retrieved from the database.";
         exit;
@@ -121,7 +125,7 @@ function get_projects_per_category($c) {
     require(ROOT_PATH . "inc/database.php");
 
     try {
-        $results = $db->prepare("SELECT nombre, descripcion, img_one, img_two 
+        $results = $db->prepare("SELECT nombre, descripcion, img_one, img_two , categorias.Categoria as categoria, url
         	                     FROM proyectos
 								 LEFT JOIN categorias
 								 ON proyectos.categoria=categorias.ID
